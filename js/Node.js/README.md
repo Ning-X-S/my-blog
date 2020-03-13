@@ -224,6 +224,16 @@ var publicPath = path.resolve(__dirname, "public");
 
 Node采用了与Web Workers相同的思路来解决单线程中大计算量的问题：`child_process`
 
+部署多个实例
+  同一台机器上部署多个实例，利用负载均衡管理工具来实现请求的均匀分发，这样每个实例使用一个 CPU，能提高多核 CPU 的利用率，常见的 Node.js 多实例管理工具如下：
+* [PM2](https://pm2.keymetrics.io/) : 专门为 Node 服务的多进程管理工具
+* [docker](https://docs.docker.com/) : 通过 docker 相关工具部署多个实例
+* [nginx](https://www.nginx.com/) : 专门负责负载均衡的高可用工具
+
+抽取子服务模块
+  如果确定有些功能 CPU 消耗特别高，且功能比较独立，我们完全可以将其独立出来，实现一个子服务，通过 rpc 方式调用。减少主服务的压力
+
+
 #### 第二章 模块机制
 
 ##### 1. CommonJS的模块规范
