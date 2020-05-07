@@ -1,6 +1,8 @@
-#### 防止会有很多merge
+#### 防止会有很多merge,例如
 
-<img src="./images/more-merge.jpg" width="400" />
+
+
+<img src="./images/more-merge.jpg" width="800" />
 
 
 ##### 1. 下游分支更新上游分支内容的时候使用 rebase  --------- git rebase origin master
