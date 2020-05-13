@@ -1,4 +1,4 @@
-#### index使用的规范
+#### 使用v-for时绑定key值的规范
 
 [为什么 Vue 中不要用 index 作为 key？（diff 算法详解）](https://juejin.im/post/5e8694b75188257372503722#heading-9)
 
